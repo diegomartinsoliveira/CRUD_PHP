@@ -1,7 +1,7 @@
 <?php
 include_once "conexao.php";
 
-$query_usuarios = "SELECT id, nome, email from usuarios LIMIT 10";
+$query_usuarios = "SELECT id, nome, email from usuarios ORDER BY id DESC";
 $result_usuarios = $conn->prepare($query_usuarios);
 $result_usuarios->execute();
 
