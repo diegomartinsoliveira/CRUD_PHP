@@ -60,21 +60,10 @@ include_once "conexao.php";
         <span id="msgAlerta"></span>
         <div class="row">
             <div class="col-lg-12">
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nome</th>
-                                <th>E-mail</th>
-                                <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                
+        <span class="listar-usuarios"></span>
+                        
 
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div>
     </div>
