@@ -42,7 +42,7 @@ include_once "conexao.php";
                                                 </div>
                                                 <div class="mb-3">
                                                 <label for="email" class="col-form-label">E-mail:</label>
-                                                    <input type="email" name="email" class="form-control" id="email" placeholder="Digite o seu e-mail" required>
+                                                    <input type="email" name="email" class="form-control" id="email" placeholder="Digite o seu e-mail">
                                                 </div>
                                                 </div>
                                             <div class="modal-footer">

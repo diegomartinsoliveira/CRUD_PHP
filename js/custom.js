@@ -16,6 +16,12 @@ listarUsuarios(1);
 cadForm.addEventListener("submit", async (e) => {
    e.preventDefault();
 
+   if(document.getElementById("nome").value === ""){
+      msgAlertaErroCad.innerHTML = "<div class='alert alert-danger' role='alert'>Necessário preencher o campo nome!</div>";
+   } else if(document.getElementById("email").value === ""){
+      msgAlertaErroCad.innerHTML = "<div class='alert alert-danger' role='alert'>Necessário preencher o campo e-mail!</div>";
+   } else {
+
    const dadosForm = new FormData(cadForm);
    dadosForm.append("add", 1);
 
@@ -37,5 +43,8 @@ if(resposta['erro']){
    cadModal.hide();
    listarUsuarios(1);
 }
+
+   }
+
    document.getElementById("cad-usuario-btn").value = "Cadastrar";
 });
