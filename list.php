@@ -30,7 +30,9 @@ while($row_usuario = $result_usuarios->fetch(PDO::FETCH_ASSOC)){
                     <td>$id</td>
                     <td>$nome</td>
                     <td>$email</td>
-                    <td>Ações</td>
+                    <td>
+                    <button id='$id' class='btn btn-outline-primary btn-sm' onclick='visUsuario($id)'>Visualizar</button>
+                    </td>
                </tr>";
     
 }

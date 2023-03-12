@@ -48,3 +48,21 @@ if(resposta['erro']){
 
    document.getElementById("cad-usuario-btn").value = "Cadastrar";
 });
+
+async function visUsuario(id){
+	const dados = await fetch('visualizar.php?id=' + id)
+   const resposta = await dados.json();
+
+if(resposta['erro']){
+   msgAlerta.innerHTML = resposta['msg'];
+   }else{
+
+      const visModal = new bootstrap.Modal(document.getElementById("visUsuarioModal"));
+      visModal.show();
+
+      document.getElementById("idUsuario").innerHTML = resposta['dados'].id;
+      document.getElementById("nomeUsuario").innerHTML = resposta['dados'].nome;
+      document.getElementById("emailUsuario").innerHTML = resposta['dados'].email;
+      
+      }
+}

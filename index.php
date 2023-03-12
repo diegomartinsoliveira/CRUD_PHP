@@ -56,6 +56,32 @@ include_once "conexao.php";
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal fade" id="visUsuarioModal" tabindex="-1" aria-labelledby="visUsuarioModallLabel" aria-hidden="true">
+                     <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                 <h1 class="modal-title fs-5" id="visUsuarioModalLabel">Detalhes do Usuário</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                         </div>
+                                            <div class="modal-body">
+                                            <span id="msgAlertaErroVis"></span>
+                                                <dl class="row">
+                                                    <dt class="col-sm-3">ID</dt>
+                                                    <dd class="col-sm-9"><span id="idUsuario"></span></dd>
+
+                                                    <dt class="col-sm-3">Nome</dt>
+                                                    <dd class="col-sm-9"><span id="nomeUsuario"></span></dd>
+
+                                                    <dt class="col-sm-3">E-mail</dt>
+                                                    <dd class="col-sm-9"><span id="emailUsuario"></span></dd>
+                                                </dl>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         <hr>
         <span id="msgAlerta"></span>
         <div class="row">
