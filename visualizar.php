@@ -3,7 +3,7 @@ include_once "conexao.php";
 
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
-if(!empty($id)){
+if (!empty($id)) {
 
     $query_usuario = "SELECT id, nome, email FROM usuarios WHERE id =:id LIMIT 1";
     $result_usuario = $conn->prepare($query_usuario);
@@ -12,13 +12,9 @@ if(!empty($id)){
 
     $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
 
-    $retorna = ['erro' => false, 'dados' => $row_usuario];
-
+    $retorna = ['erro' => false, 'dados' => $row_usuario];    
 } else {
-
-    $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro, nenhum usuário encontrado!</div>"];
+    $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Nenhum usuário encontrado!</div>"];
 }
 
 echo json_encode($retorna);
-
-?>
